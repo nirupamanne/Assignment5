@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the JAR file from the target directory to the container
-COPY target/myproject-0.0.1-SNAPSHOT.jar /app/myproject-0.0.1-SNAPSHOT.jar
+COPY target/myproject-0.0.1-SNAPSHOT.war /app/myproject-0.0.1-SNAPSHOT.war
 
 # Run the JAR file
-ENTRYPOINT ["java", "-jar", "/app/myproject-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/myproject-0.0.1-SNAPSHOT.war"]
